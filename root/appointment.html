@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="CSS/appointmentstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><a href="index.html">VitalCare<b>+</b></a></div>
+        <h1>Book an Appointment</h1>
+        <form id="appointmentForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="appointmentType">Appointment Type</label>
+            <select id="appointmentType" name="appointmentType" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="doctor">See a Doctor</option>
+                <option value="dentist">See a Dentist</option>
+                <option value="physiotherapy">Physiotherapy Session</option>
+            </select>
+
+            <label for="appointmentDate">Appointment Date</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+        <div id="confirmation" class="hidden">
+            <p>Thank you! Your appointment has been booked.</p>
+        </div>
+    </div>
+    <script src="js/appointmentsjs.js"></script>
+</body>
+</html>

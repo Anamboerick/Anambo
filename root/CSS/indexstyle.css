@@ -1,0 +1,185 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    background-image: url('mainbackground.png'); /* Replace with the correct image path */
+    background-size: cover; /* Ensures the image covers the entire page */
+   
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #f8a8d6; /* Soft pink accent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navdiv {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo a {
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #fd29cf; /* Stronger pink for the logo */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ff85c0;
+}
+
+/* Navigation items */
+.navdiv ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navdiv ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navdiv ul li a:hover {
+    background-color: #f8a8d6; /* Soft pink background on hover */
+    color: #fff;
+}
+
+/* Button styling */
+button {
+    background-color:#fd29cf; /* Pink */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #ff85c0;
+    transform: scale(1.05);
+}
+
+/* Remove default button styles for links inside buttons */
+button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navdiv ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    .navdiv ul li, .navdiv button {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px; /* Width of the sidebar */
+    background-color: #4070f4; /* Sidebar background color */
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height of the page */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for the sidebar */
+    z-index: 999;
+}
+
+/* Title inside Sidebar */
+.sidebar-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Sidebar List */
+.sidebar-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.sidebar-link:hover {
+    background-color: #ff69b4; /* Highlight color on hover */
+    color: #fff;
+}
+
+/* Content Area */
+.content {
+    margin-left: 270px; /* Space for the sidebar */
+    padding: 20px;
+}
+
+/* Sidebar Links Hover Effect */
+.sidebar-link:hover {
+    background-color: #ff69b4; /* Soft pink hover effect */
+    color: white;
+}
+
+/* Responsive Design for Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust the sidebar width for smaller screens */
+    }
+    
+    .content {
+        margin-left: 220px; /* Adjust content area for smaller sidebar */
+    }
+    
+    /* Optionally, make the sidebar collapsible on mobile */
+    .sidebar {
+        display: none; /* Can be toggled with JavaScript for mobile */
+    }
+
+    .sidebar.show {
+        display: block; /* Show sidebar on toggle */
+    }
+}

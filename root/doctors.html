@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Slide</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/doctorstyle.css">
+</head>
+<body>
+    <section class="intro-section">
+        <h1 class="section-heading">Meet Our Experienced Doctors</h1>
+        <p class="section-paragraph">
+            Our team of highly qualified and compassionate doctors is dedicated to providing personalized 
+            care for patients of all ages. With expertise in various medical fields, 
+            we aim to help you achieve optimal health and well-being. 
+            Browse through our doctors' profiles and find the right expert for your 
+            healthcare needs.
+            <div class="logo"><a href="index.html">to go to main page click here</a></div><br>
+        </p>
+    </section> <br>
+
+    <div class="slide-container swiper">
+        <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="images/pic1.jpg" alt="profileimg" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Dr. Erick Anambo</h2>
+                    <p class="description">Dedicated to providing personalized care and promoting heart health for patients of all ages.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="images\image2.jpeg" alt="profileimg" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Dr. A Smith</h2>
+                    <p class="description">Expert in pediatric care, ensuring the health and well-being of children and families.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="images/image3.jpeg" alt="profileimg" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Dr. A Julia</h2>
+                    <p class="description">Providing advanced surgical care with precision and compassion.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="images/image4.jpeg" alt="profileimg" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Dr. K Martin</h2>
+                    <p class="description">Providing innovative treatments and personalized care to enhance quality of life.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <img src="images/image5.jpeg" alt="profileimg" class="card-img">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Dr. S Mburu</h2>
+                    <p class="description">Providing innovative treatments and personalized care to enhance quality of life.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/doctor.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 3,         // Show 3 slides per view
+            spaceBetween: 30,         // Space between slides
+            slidesPerGroup: 3,        // Move 3 slides at once
+            loop: true,               // Infinite loop
+            navigation: {
+                nextEl: '.swiper-button-next', // Next button
+                prevEl: '.swiper-button-prev', // Prev button
+            },
+            pagination: {
+                el: '.swiper-pagination', // Pagination control
+                clickable: true,           // Clickable pagination
+            },
+            breakpoints: {
+                640: { slidesPerView: 1, spaceBetween: 20 },  // Mobile view
+                768: { slidesPerView: 2, spaceBetween: 30 },  // Tablet view
+                1024: { slidesPerView: 3, spaceBetween: 40 }, // Desktop view
+            },
+        });
+    </script>
+</body>
+</html>
